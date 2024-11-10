@@ -1,0 +1,74 @@
+1. Political News Generator
+
+*** NEW IDEAS ***
+
+Have user input url and use some data analysis to identify if it is more left or more right using key left or right words and calcuate
+the chance of it being one way or the other
+
+*********************************
+
+
+
+
+Ai prompt with layout
+
+Prompt: 
+One idea we have is make a website that a user can type a political idea or political topic and it will gather sources from web that pulls 
+far left sources and far right sources and nuetral sources and use ai to generate a overall idea of the topic from the sources. 
+
+Response:
+
+User Interface (UI) for Input:
+Build a simple webpage where users can type in a political topic or keyword.
+Use a form submission to trigger a backend process that gathers and analyzes the information.
+
+Web Scraping and News Aggregation:
+Sources: Use news APIs (such as Bing News API, NewsAPI, or GDELT) to gather articles. Some APIs allow you to filter sources by political leaning,
+but you may also need to build a list of known sources by bias (left, right, neutral).
+
+Categorize by Bias, Create three categories: 
+left-leaning, right-leaning, and neutral sources. The AllSides Bias Ratings website offers a 
+comprehensive list that categorizes major news outlets.
+Sentiment and Source Categorization: For extra refinement, you can use basic keyword matching or sentiment analysis tools (like VADER or TextBlob)
+to help classify the sentiment in articles to support your bias categories.
+
+Summarization with AI:
+Once articles are categorized, use an AI-based summarization tool to create summaries for each category:
+Far Left Summary
+Far Right Summary
+Neutral Summary
+Tools for Summarization: Use OpenAI's GPT or Hugging Face models for summarization. Use separate prompts or models for each category so you can better control how it interacts with the content.
+
+Generate an Overall Summary and Displaying the Output:
+Present the left, right, and neutral summaries on the web page along with the overall summary.
+Optionally, display links to the original articles for users who want to explore further.
+
+Technology Stack:
+Frontend: HTML/CSS, JavaScript, with a framework like React for smoother UI interactions.
+Backend: Flask or Django for a quick setup, handling API calls and processing.
+
+APIs/Services:
+NewsAPI, GDELT, or Bing News API for sourcing news articles.
+OpenAI GPT or Hugging Face Summarization Models for AI-generated summaries.
+VADER or TextBlob for quick sentiment analysis (if desired for classification).
+Storage: Firebase or SQLite to save recent searches or cache data if needed.
+
+Challenges and Tips
+Rate Limits: News APIs often have rate limits, so limit queries for each search.
+Summarization Time: Summarizing multiple sources may slow down response time, so start by summarizing only a few articles per bias category for each query.
+Data Quality: Ensure sources selected by bias are reputable to avoid promoting misinformation; stick with well-known outlets.
+Potential Enhancements
+Interactive Graph: Display a visual bias chart showing the distribution of sentiment/bias across sources.
+User Feedback: Allow users to provide feedback on summaries, helping refine results and tune for bias detection.
+Trending Topics: Auto-suggest trending political topics based on recent queries or popular keywords.
+
+
+
+
+
+
+
+
+
+
+
